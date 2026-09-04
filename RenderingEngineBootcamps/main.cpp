@@ -12,7 +12,6 @@ struct Student {
     J_Int id_number;
     J_Int age;
 };
-
 void PlaceStringLine(std::string message)
 {
     std::string newString;
@@ -200,8 +199,8 @@ void ArrayTests()
 }
 
 int main() {
-    FirstExercises();
-    SecondExercises();
+    // FirstExercises();
+    // SecondExercises();
     ThirdExercises();
     // ArrayTests();
 
