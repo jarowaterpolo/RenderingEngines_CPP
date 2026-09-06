@@ -27,9 +27,7 @@ struct NewStudentStruct {
         {
             printf("student created with copy constructor\n");
             this->name = anotherStudent.name;
-            for (std::string module : anotherStudent.modules) {
-                modules.push_back(module);
-            }
+            modules = anotherStudent.modules;
         }
         ~NewStudentStruct(void)
         {
@@ -37,6 +35,13 @@ struct NewStudentStruct {
         };
         NewStudentStruct& operator=(const NewStudentStruct& anotherStudent)
         {
+            if (this == &anotherStudent) {
+                return *this;
+            }
+
+            this->name = anotherStudent.name;
+            this->modules = anotherStudent.modules;
+
             printf("student changed with assign operator\n");
             return *this;
         }

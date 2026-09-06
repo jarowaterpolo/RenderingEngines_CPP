@@ -198,6 +198,15 @@ void SecondExercisesBC2()
     studentReference.addModule("Art");
     studentReference.addModule("Design");
     studentReference.printStudentInfo();
+
+    NewStudentStruct S2 = studentGroup[0];
+    NewStudentStruct S3("a no one", 3);
+    S2.printStudentInfo();
+    S3.printStudentInfo();
+    S3 = S2;
+    S2.printStudentInfo();
+    S3.printStudentInfo();
+
 }
 
 void RunBootCamp2()
