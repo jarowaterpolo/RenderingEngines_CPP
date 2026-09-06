@@ -2,6 +2,8 @@
 // Created by jaron on 04/09/2026.
 //
 #include "Functions.h"
+#include <string>
+#include <format>
 
 bool IsEven(int number)
 {
@@ -82,4 +84,17 @@ int ReturnSmallestIntInTheArray(int array[], int arraySize)
         }
     }
     return smallestInt;
+}
+
+void PlaceStringLine(std::string message)
+{
+    std::string newString;
+    if (message.length() > 0) {
+        newString = std::format("_______________{}_______________", message);
+        printf("%s\n", newString.c_str());
+    }
+    else {
+        newString = "_____________________________________________";
+        printf("%s\n", newString.c_str());
+    }
 }

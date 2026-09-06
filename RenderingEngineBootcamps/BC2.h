@@ -1,0 +1,10 @@
+//
+// Created by jaron on 06/09/2026.
+//
+
+#ifndef RENDERINGENGINEBOOTCAMPS_BC2_H
+#define RENDERINGENGINEBOOTCAMPS_BC2_H
+
+void RunBootCamp2();
+
+#endif //RENDERINGENGINEBOOTCAMPS_BC2_H

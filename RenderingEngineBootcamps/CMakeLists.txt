@@ -7,4 +7,10 @@ add_executable(RenderingEngineBootcamps main.cpp
         Functions.h
         Functions.cpp
         DivisorChallenge.cpp
-        DivisorChallenge.h)
+        DivisorChallenge.h
+        BC1.h
+        BC1.cpp
+        BC2.cpp
+        BC2.h
+        Student.cpp
+        Student.h)
