@@ -14,37 +14,11 @@ struct NewStudentStruct {
         const int studyNumber;
         std::vector<std::string> modules;
     public:
-        NewStudentStruct() : studyNumber(0)
-        {
-            printf("student created with default constructor\n");
-        }
-        NewStudentStruct(std::string name, int number) : studyNumber(number)
-        {
-            printf("student created with custom constructor\n");
-            this->name = name;
-        }
-        NewStudentStruct(const NewStudentStruct& anotherStudent) : studyNumber(anotherStudent.getStudyNumber())
-        {
-            printf("student created with copy constructor\n");
-            this->name = anotherStudent.name;
-            modules = anotherStudent.modules;
-        }
-        ~NewStudentStruct(void)
-        {
-            printf("student deleted with default destructor\n");
-        };
-        NewStudentStruct& operator=(const NewStudentStruct& anotherStudent)
-        {
-            if (this == &anotherStudent) {
-                return *this;
-            }
-
-            this->name = anotherStudent.name;
-            this->modules = anotherStudent.modules;
-
-            printf("student changed with assign operator\n");
-            return *this;
-        }
+        NewStudentStruct();
+        NewStudentStruct(std::string name, int number);
+        NewStudentStruct(const NewStudentStruct& anotherStudent);
+        ~NewStudentStruct(void);
+        NewStudentStruct& operator=(const NewStudentStruct& anotherStudent);
 
         std::string getName() const {return this->name;}
         int getStudyNumber() const {return this->studyNumber;}

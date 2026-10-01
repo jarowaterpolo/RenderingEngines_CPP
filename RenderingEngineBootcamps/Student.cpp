@@ -5,6 +5,41 @@
 #include <cstdio>
 #include <string>
 #include "Student.h"
+#pragma region Constructors
+
+NewStudentStruct::NewStudentStruct() : studyNumber(0)
+{
+    printf("student created with default constructor\n");
+}
+NewStudentStruct::NewStudentStruct(std::string name, int number) : studyNumber(number)
+{
+    printf("student created with custom constructor\n");
+    this->name = name;
+}
+NewStudentStruct::NewStudentStruct(const NewStudentStruct& anotherStudent) : studyNumber(anotherStudent.getStudyNumber())
+{
+    printf("student created with copy constructor\n");
+    this->name = anotherStudent.name;
+    this->modules = anotherStudent.modules;
+}
+NewStudentStruct::~NewStudentStruct(void)
+{
+    printf("student deleted with default destructor\n");
+};
+NewStudentStruct& NewStudentStruct::operator=(const NewStudentStruct& anotherStudent)
+{
+    if (this == &anotherStudent) {
+        return *this;
+    }
+
+    this->name = anotherStudent.name;
+    this->modules = anotherStudent.modules;
+
+    printf("student changed with assign operator\n");
+    return *this;
+}
+
+#pragma endregion Constructors
 
 void NewStudentStruct::updateName(std::string newName)
 {
